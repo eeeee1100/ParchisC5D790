@@ -61,14 +61,10 @@ public class ControladorJuego implements ActionListener, MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        System.out.println("X "+e.getX()+" Y "+e.getY());
-        ficha.getPosicion().setX(e.getX());
-        ficha.getPosicion().setY(e.getY());
-        panelJuego.repaint();
+
+        
     }
     
-    posicion = new Posicion(e.getX(),e.getY())
-
     @Override
     public void mousePressed(MouseEvent e) {
         

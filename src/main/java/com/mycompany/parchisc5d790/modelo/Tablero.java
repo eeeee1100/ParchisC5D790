@@ -238,13 +238,13 @@ public class Tablero {
     }
     
     public int getIndexFicha(int x, int y){
-    for (int index=0;index< tablero.length; index++){
-        System.out.println(index);
-            if(tablero[index] != null){
-             if(tablero[index].getFicha().isContains(x,y)){
+    for (int index=0;index<casaJugador1.getCantidadFichas();index++){
+    
+            if(casaJugador1.getFicha(index)!=null){
+             if(casaJugador1.getFicha(index).isContains(x,y)){
                  return index;
              }
-            }
+            }  
          }
         return -1;
     }

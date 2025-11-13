@@ -6,6 +6,7 @@ package com.mycompany.parchisc5d790.modelo;
 
 import java.awt.Component;
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 
 /**
@@ -16,13 +17,21 @@ public class Ficha {
     private Posicion posicion;
     private ImageIcon imagen;
     private String color;
-
+    private Rectangle hitbox;
+    private boolean isTablero;
+    
     public Ficha(Posicion posicion, ImageIcon imagen, String color) {
         this.posicion = posicion;
         this.imagen = imagen;
         this.color = color;
     }
 
+        public boolean isContains(int x, int y){
+    
+        return hitbox.contains(x, y);
+    
+    }
+    
     public Posicion getPosicion() {
         return posicion;
     }

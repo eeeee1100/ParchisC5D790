@@ -48,7 +48,7 @@ public class Casa {
        }
    }
     
-   public int getCantidadFicha(){
+   public int getCantidadFichas(){
         return fichas.length;
     }
  public int getIndexFicha(int x, int y) {
@@ -72,6 +72,15 @@ public class Casa {
                 }
             }
         }
+
+    }
+
+    public int getSalida() {
+        return salida;
+    }
+
+    public void setSalida(int salida) {
+        this.salida = salida;
     }
     
 }
