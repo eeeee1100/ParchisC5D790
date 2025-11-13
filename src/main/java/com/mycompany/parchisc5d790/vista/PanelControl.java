@@ -32,19 +32,25 @@ public class PanelControl extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         btnDado = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jlFondo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+
+        jLabel2.setText("jLabel2");
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnDado.setText("dado");
+        btnDado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/dado1.1.png"))); // NOI18N
+        btnDado.setBorderPainted(false);
+        btnDado.setContentAreaFilled(false);
         btnDado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDadoActionPerformed(evt);
             }
         });
-        add(btnDado, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 50, -1, -1));
+        add(btnDado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 120, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botonAtras.png"))); // NOI18N
         jButton1.setActionCommand("AtrasJuego");
@@ -54,6 +60,10 @@ public class PanelControl extends javax.swing.JPanel {
 
         jlFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/TableroFondo.png"))); // NOI18N
         add(jlFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel1.setText("Jugador 1");
+        jLabel1.setToolTipText("");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 320, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDadoActionPerformed
@@ -64,6 +74,8 @@ public class PanelControl extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDado;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jlFondo;
     // End of variables declaration//GEN-END:variables
 }

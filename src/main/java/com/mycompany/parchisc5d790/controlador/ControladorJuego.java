@@ -58,6 +58,9 @@ public class ControladorJuego implements ActionListener, MouseListener {
                 break;
         }
     }
+    
+    int indiceCelda = areaJuego.getIndexFicha(e.getX(), e.getY());
+    if indice
 
     @Override
     public void mouseClicked(MouseEvent e) {

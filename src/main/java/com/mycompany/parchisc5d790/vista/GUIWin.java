@@ -30,6 +30,8 @@ public class GUIWin extends javax.swing.JFrame {
 
         txtEstadisticas = new javax.swing.JLabel();
         txtTiempo = new javax.swing.JLabel();
+        btnMenu = new javax.swing.JButton();
+        btnReiniciar = new javax.swing.JButton();
         jlFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -39,11 +41,30 @@ public class GUIWin extends javax.swing.JFrame {
         txtTiempo.setToolTipText("");
         getContentPane().add(txtTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, -1, -1));
 
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botonInicio.png"))); // NOI18N
+        btnMenu.setBorderPainted(false);
+        btnMenu.setContentAreaFilled(false);
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 510, -1, -1));
+
+        btnReiniciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botonReiniciar.png"))); // NOI18N
+        btnReiniciar.setBorderPainted(false);
+        btnReiniciar.setContentAreaFilled(false);
+        getContentPane().add(btnReiniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 510, -1, -1));
+
         jlFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/panelVictoria.png"))); // NOI18N
         getContentPane().add(jlFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -71,6 +92,8 @@ public class GUIWin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnMenu;
+    private javax.swing.JButton btnReiniciar;
     private javax.swing.JLabel jlFondo;
     private javax.swing.JLabel txtEstadisticas;
     private javax.swing.JLabel txtTiempo;

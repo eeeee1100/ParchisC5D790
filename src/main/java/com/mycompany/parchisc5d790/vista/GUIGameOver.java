@@ -4,6 +4,9 @@
  */
 package com.mycompany.parchisc5d790.vista;
 
+import com.mycompany.parchisc5d790.controlador.ControladorPrincipal;
+import javax.swing.JTextField;
+
 /**
  *
  * @author UCR
@@ -18,6 +21,21 @@ public class GUIGameOver extends javax.swing.JFrame {
     public GUIGameOver() {
         initComponents();
     }
+    
+        public GUIGameOver(ControladorPrincipal controlador) {
+        initComponents();
+        btnReiniciar.addActionListener(controlador);
+        btnMenu.addActionListener(controlador);  
+        
+    }
+
+    public String getTxtPuntaje() {
+        return txtPuntaje.getText();
+    }
+
+    public String getTxtTiempo() {
+        return txtTiempo.getText();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,14 +48,33 @@ public class GUIGameOver extends javax.swing.JFrame {
 
         txtPuntaje = new javax.swing.JTextField();
         txtTiempo = new javax.swing.JTextField();
+        btnMenu = new javax.swing.JButton();
+        btnReiniciar = new javax.swing.JButton();
         jlFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtPuntaje.setActionCommand("Score");
+        txtPuntaje.setActionCommand("Puntaje");
         getContentPane().add(txtPuntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 200, -1));
+
+        txtTiempo.setActionCommand("Tiempo");
         getContentPane().add(txtTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 200, -1));
+
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botonInicio.png"))); // NOI18N
+        btnMenu.setBorderPainted(false);
+        btnMenu.setContentAreaFilled(false);
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 510, -1, -1));
+
+        btnReiniciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botonReiniciar.png"))); // NOI18N
+        btnReiniciar.setBorderPainted(false);
+        btnReiniciar.setContentAreaFilled(false);
+        getContentPane().add(btnReiniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 510, -1, -1));
 
         jlFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/panelGameOver.png"))); // NOI18N
         getContentPane().add(jlFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -45,32 +82,13 @@ public class GUIGameOver extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new GUIGameOver().setVisible(true));
-    }
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMenuActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnMenu;
+    private javax.swing.JButton btnReiniciar;
     private javax.swing.JLabel jlFondo;
     private javax.swing.JTextField txtPuntaje;
     private javax.swing.JTextField txtTiempo;

@@ -43,5 +43,15 @@ public class Jugador {
     public void setColor(String color) {
         this.color = color;
     } 
+
+    public int getPuntos() {
+        return puntos;
+    }
+
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
+    
+    
 }
 

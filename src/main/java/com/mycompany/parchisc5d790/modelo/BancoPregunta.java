@@ -18,11 +18,11 @@ public class BancoPregunta {
     }
     
     public void crearPreguntas(){
-        agregar(new Pregunta("¿Es San José la capital de Costa Rica?",1));
-        agregar(new Pregunta("¿Un método void recibe parametros?",0));
-        agregar(new Pregunta("¿Un ArrayList permite establecer un arreglo sin número establecido?",1));
+        agregar(new Pregunta("¿Estás vivo?",1));
+        agregar(new Pregunta("¿Te gusta la carrera de ITM?",0));
+        agregar(new Pregunta("¿Se puede comer un pollito asado a la leña, con una coca fría y arroz blanco en el laboratorio?",1));
         agregar(new Pregunta("¿María siempre llega temprano?",0));
-        agregar(new Pregunta("¿Los atributos privados se pueden acceder desde afuera de la clase?",0));
+        agregar(new Pregunta("¿Eres un ser consciente, ergo eres?",1));
     }
     
     public void agregar(Pregunta pregunta){
@@ -36,6 +36,8 @@ public class BancoPregunta {
     public int getElementos(){
         return listaPreguntas.size();
     }
+    
+    
     
     
 }//Fin de la clase
