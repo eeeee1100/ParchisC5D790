@@ -5,6 +5,7 @@
 package com.mycompany.parchisc5d790.vista;
 
 import com.mycompany.parchisc5d790.controlador.ControladorJuego;
+import javax.swing.JButton;
 
 /**
  *
@@ -12,17 +13,31 @@ import com.mycompany.parchisc5d790.controlador.ControladorJuego;
  */
 public class PanelControl extends javax.swing.JPanel {
 
+    GUIJugador guiJugador;
+    
     /**
      * Creates new form PanelControl
      */
     public PanelControl() {
         initComponents();
+        this.guiJugador=guiJugador;
+    }
+    
+    
+    public void escuchar(ControladorJuego controlador){
+        btnAtras.addActionListener(controlador);
+        btnDado.addActionListener(controlador);
+    
+    }
+    
+     public void setJlNombreJugador1(String jlNombreJugador1) {
+        this.jlNombreJugador1.setText(jlNombreJugador1);
     }
 
-    public void escuchar(ControladorJuego controlador){
-        jButton1.addActionListener(controlador);
-        btnDado.addActionListener(controlador);
+    public void setJlNombreJugador2(String jlNombreJugador2) {
+        this.jlNombreJugador2.setText(jlNombreJugador2);
     }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,9 +49,10 @@ public class PanelControl extends javax.swing.JPanel {
 
         jLabel2 = new javax.swing.JLabel();
         btnDado = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnAtras = new javax.swing.JButton();
+        jlNombreJugador1 = new javax.swing.JLabel();
+        jlNombreJugador2 = new javax.swing.JLabel();
         jlFondo = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
 
@@ -52,18 +68,23 @@ public class PanelControl extends javax.swing.JPanel {
         });
         add(btnDado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 120, -1, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botonAtras.png"))); // NOI18N
-        jButton1.setActionCommand("AtrasJuego");
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 650, -1, -1));
+        btnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botonAtras.png"))); // NOI18N
+        btnAtras.setActionCommand("AtrasJuego");
+        btnAtras.setBorderPainted(false);
+        btnAtras.setContentAreaFilled(false);
+        add(btnAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 650, -1, -1));
+
+        jlNombreJugador1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jlNombreJugador1.setText("Jugador 1");
+        jlNombreJugador1.setToolTipText("");
+        add(jlNombreJugador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 320, -1, -1));
+
+        jlNombreJugador2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jlNombreJugador2.setText("Jugador 2");
+        add(jlNombreJugador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 420, -1, -1));
 
         jlFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/TableroFondo.png"))); // NOI18N
         add(jlFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jLabel1.setText("Jugador 1");
-        jLabel1.setToolTipText("");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 320, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDadoActionPerformed
@@ -72,10 +93,15 @@ public class PanelControl extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnDado;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jlFondo;
+    private javax.swing.JLabel jlNombreJugador1;
+    private javax.swing.JLabel jlNombreJugador2;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getBtnDado() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
