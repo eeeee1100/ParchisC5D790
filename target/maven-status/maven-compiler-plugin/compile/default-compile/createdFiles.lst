@@ -8,6 +8,7 @@ com\mycompany\parchisc5d790\modelo\Posicion.class
 com\mycompany\parchisc5d790\vista\GUIPrincipal.class
 com\mycompany\parchisc5d790\vista\GUIWin$1.class
 com\mycompany\parchisc5d790\vista\PanelControl.class
+ucr\com\parchisconjunto\controlador\AudioController.class
 com\mycompany\parchisc5d790\vista\GUICreditos.class
 com\mycompany\parchisc5d790\vista\GUIGameOver.class
 com\mycompany\parchisc5d790\modelo\BancoPregunta.class
@@ -16,7 +17,6 @@ com\mycompany\parchisc5d790\modelo\CeldaEspecialColor.class
 com\mycompany\parchisc5d790\vista\GUIWin.class
 com\mycompany\parchisc5d790\modelo\Dado.class
 com\mycompany\parchisc5d790\modelo\Pregunta.class
-com\mycompany\parchisc5d790\vista\NewJFrame.class
 com\mycompany\parchisc5d790\vista\GUIInstrucciones.class
 com\mycompany\parchisc5d790\modelo\Jugador.class
 com\mycompany\parchisc5d790\modelo\CeldaEspecial.class
@@ -25,6 +25,7 @@ com\mycompany\parchisc5d790\controlador\ControladorPrincipal.class
 com\mycompany\parchisc5d790\controlador\ControladorJuego.class
 com\mycompany\parchisc5d790\modelo\Casa.class
 com\mycompany\parchisc5d790\vista\GUIJugador.class
+com\mycompany\parchisc5d790\vista\GUICronometro.class
 com\mycompany\parchisc5d790\vista\GUIJuego.class
 com\mycompany\parchisc5d790\modelo\Tablero.class
 com\mycompany\parchisc5d790\modelo\Ficha.class

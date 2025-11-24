@@ -5,6 +5,7 @@
 package com.mycompany.parchisc5d790.vista;
 
 import com.mycompany.parchisc5d790.controlador.ControladorJuego;
+import com.mycompany.parchisc5d790.controlador.ControladorPrincipal;
 import javax.swing.JButton;
 
 /**
@@ -20,13 +21,17 @@ public class PanelControl extends javax.swing.JPanel {
      */
     public PanelControl() {
         initComponents();
-        this.guiJugador=guiJugador;
+        //this.guiJugador=guiJugador;
+        
     }
     
     
     public void escuchar(ControladorJuego controlador){
         btnAtras.addActionListener(controlador);
         btnDado.addActionListener(controlador);
+        btnDetener.addActionListener(controlador);
+         btnIniciar.addActionListener(controlador);
+        btnPausar.addActionListener(controlador);
     
     }
     
@@ -36,6 +41,19 @@ public class PanelControl extends javax.swing.JPanel {
 
     public void setJlNombreJugador2(String jlNombreJugador2) {
         this.jlNombreJugador2.setText(jlNombreJugador2);
+    }
+    
+        public String getJlTime() {
+        return jlTime.getText();
+    }
+
+    public void setJlTime(String jlTime) {
+        this.jlTime.setText(jlTime);
+    }
+
+    
+    public void setColor(){
+        
     }
     
     /**
@@ -52,6 +70,10 @@ public class PanelControl extends javax.swing.JPanel {
         btnAtras = new javax.swing.JButton();
         jlNombreJugador1 = new javax.swing.JLabel();
         jlNombreJugador2 = new javax.swing.JLabel();
+        btnIniciar = new javax.swing.JButton();
+        btnPausar = new javax.swing.JButton();
+        btnDetener = new javax.swing.JButton();
+        jlTime = new javax.swing.JLabel();
         jlFondo = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
@@ -83,6 +105,20 @@ public class PanelControl extends javax.swing.JPanel {
         jlNombreJugador2.setText("Jugador 2");
         add(jlNombreJugador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 420, -1, -1));
 
+        btnIniciar.setText("Iniciar");
+        add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 220, -1, -1));
+
+        btnPausar.setText("Pausar");
+        add(btnPausar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, -1, -1));
+
+        btnDetener.setText("Detener");
+        add(btnDetener, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 300, -1, -1));
+
+        jlTime.setBackground(new java.awt.Color(153, 255, 51));
+        jlTime.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jlTime.setOpaque(true);
+        add(jlTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 140, 90, 70));
+
         jlFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/TableroFondo.png"))); // NOI18N
         add(jlFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
@@ -95,10 +131,14 @@ public class PanelControl extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtras;
     private javax.swing.JButton btnDado;
+    private javax.swing.JButton btnDetener;
+    private javax.swing.JButton btnIniciar;
+    private javax.swing.JButton btnPausar;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jlFondo;
     private javax.swing.JLabel jlNombreJugador1;
     private javax.swing.JLabel jlNombreJugador2;
+    private javax.swing.JLabel jlTime;
     // End of variables declaration//GEN-END:variables
 
     public JButton getBtnDado() {

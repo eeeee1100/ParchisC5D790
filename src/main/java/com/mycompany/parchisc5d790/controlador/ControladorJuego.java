@@ -44,6 +44,7 @@ public class ControladorJuego implements ActionListener, MouseListener {
     private Dado dado;
     private GUIGameOver guiGameOver;
     private GUIWin guiWin;
+    private Cronometro cronometro;
     
     
     private int resultadoDado = 0;
@@ -51,7 +52,7 @@ public class ControladorJuego implements ActionListener, MouseListener {
 
     public ControladorJuego(GUIPrincipal guiPrincipal, String colorJugador1, String nombreJugador1,  String nombreJugador2) {
         this.guiPrincipal = guiPrincipal;
-        guiJuego = new GUIJuego(this);
+        guiJuego = new GUIJuego();
         guiGameOver = new GUIGameOver();
         guiWin = new GUIWin();
         panelJuego = guiJuego.getPanelJuego();
@@ -59,6 +60,8 @@ public class ControladorJuego implements ActionListener, MouseListener {
         panelControl = guiJuego.getPanelControl();
         panelControl.setJlNombreJugador1(nombreJugador1);
         panelControl.setJlNombreJugador2(nombreJugador2);
+        panelControl.escuchar(this);
+        panelJuego.escuchar(this);
         dado = new Dado();
         guiJuego.setVisible(true);
         
@@ -105,8 +108,15 @@ public class ControladorJuego implements ActionListener, MouseListener {
         panelJuego.repaint();
     
     }
-    
-    
+//    
+//       public void Controlador() {
+//
+//        timer = new Timer(30, this);
+//        panelControl = new PanelControl(this);
+//        cronometro = new Cronometro();
+//        update();
+//        frame.setVisible(true);
+//    }
     
     
     @Override
@@ -217,6 +227,46 @@ public class ControladorJuego implements ActionListener, MouseListener {
         
 
     }
+
+//    @Override
+//    public void actionPerformed(ActionEvent e) {
+//        if (e.getActionCommand() != null) {
+//            switch (e.getActionCommand()) {
+//                case "Iniciar":
+//                     
+//                    cronometro.start();
+//                    timer.start();
+//                   
+//                    break;
+//                case "Detener":
+//
+//                   cronometro.stop();
+//                   timer.stop();
+//                    break;
+//                case "Pausar":
+//                    cronometro.reset();
+//                    timer.restart();
+//                    break;
+//
+//            }
+//
+//        }
+//        if (timer.isRunning()) {
+//            update();
+//          
+//             if (cronometro.getElapsedTime()>= 20000) {
+//                        timer.stop();
+//                        cronometro.stop();
+//                    }
+//        }
+//    }
+//
+//    public void update() {
+//
+//        frame.setJlTime(cronometro.getFormattedTime());
+//    }
+//    
+//    
 
     @Override
     public void mousePressed(MouseEvent e) {

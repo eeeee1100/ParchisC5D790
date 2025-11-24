@@ -4,21 +4,18 @@
  */
 package com.mycompany.parchisc5d790.vista;
 
-import com.mycompany.parchisc5d790.controlador.ControladorJuego;
-
 /**
  *
- * @author Sham
+ * @author UCR
  */
 public class GUIJuego extends javax.swing.JFrame {
-    
+   
+
     /**
      * Creates new form GUIJuego
      */
-    public GUIJuego(ControladorJuego controlador) {
+    public GUIJuego() {
         initComponents();
-        panelJuego.escuchar(controlador);
-        panelControl.escuchar(controlador);
     }
 
     public PanelControl getPanelControl() {
@@ -29,6 +26,8 @@ public class GUIJuego extends javax.swing.JFrame {
         return panelJuego;
     }
 
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -52,19 +51,15 @@ public class GUIJuego extends javax.swing.JFrame {
         );
         panelJuegoLayout.setVerticalGroup(
             panelJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 620, Short.MAX_VALUE)
+            .addGap(0, 630, Short.MAX_VALUE)
         );
 
-        getContentPane().add(panelJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 610, 620));
+        getContentPane().add(panelJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 610, 630));
         getContentPane().add(panelControl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.mycompany.parchisc5d790.vista.PanelControl panelControl;
     private com.mycompany.parchisc5d790.vista.PanelJuego panelJuego;

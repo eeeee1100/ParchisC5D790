@@ -25,6 +25,7 @@ public class ControladorPrincipal implements ActionListener{
     private ControladorJuego controladorJuego;
     private GUIJugador guiJugador;
     private GUIJuego guiJuego;
+//    private AudioController audio;
     
     public ControladorPrincipal(){
         guiPrincipal = new GUIPrincipal(this); 
@@ -33,6 +34,7 @@ public class ControladorPrincipal implements ActionListener{
         guiInstrucciones = new GUIInstrucciones(this);
         guiHistoria = new GUIHistoria(this);
         guiJugador = new GUIJugador(this);
+//        audio = new AudioController();
     }
     
         @Override
@@ -75,6 +77,13 @@ public class ControladorPrincipal implements ActionListener{
                     break;
                 case "Salir":
                     System.exit(0);
+                    break;
+                case "Sonido":
+//                    if(audio.estaReproduciendo()){
+//                        audio.detener();
+//                    }else{
+//                        audio.iniciarMusica("/audios/LABUBU - OFFICIAL MV FULL SONG 2025.wav")
+//                    }
                     break;
             }
     }
