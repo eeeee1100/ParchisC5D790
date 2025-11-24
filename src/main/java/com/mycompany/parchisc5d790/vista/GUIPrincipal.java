@@ -72,6 +72,7 @@ public class GUIPrincipal extends javax.swing.JFrame {
         getContentPane().add(btnHistoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 540, -1, -1));
 
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botonSalir_1.png"))); // NOI18N
+        btnSalir.setActionCommand("Salir");
         btnSalir.setBorderPainted(false);
         btnSalir.setContentAreaFilled(false);
         getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 620, -1, -1));
@@ -80,7 +81,7 @@ public class GUIPrincipal extends javax.swing.JFrame {
         jButton1.setActionCommand("Volumen");
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 630, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 620, -1, -1));
 
         jlFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondoPrincipal.png"))); // NOI18N
         getContentPane().add(jlFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 950, 710));

@@ -1,8 +1,10 @@
+package com.mycompany.parchisc5d790.controlador;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ucr.com.parchisconjunto.controlador;
+
 
 
 import java.io.IOException;
@@ -21,9 +23,9 @@ public class AudioController {
    private Clip clip;
     
     
-    public void iniciarMusica(String ruta){ //Entra un parametro que será la ruta del audio
-        try{ //Este evalua diferentes excepcione que podrían haber
-               URL url = getClass().getResource(ruta); //getClass() = clase actual,  getResource(nombreSonido)= busca un archivo de resources
+    public void iniciarMusica(String ruta){ 
+        try{
+                URL url = getClass().getResource(ruta); //getClass() = clase actual,  getResource(nombreSonido)= busca un archivo de resources
                 AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(url);
                 clip = AudioSystem.getClip();
                 clip.open(audioInputStream);

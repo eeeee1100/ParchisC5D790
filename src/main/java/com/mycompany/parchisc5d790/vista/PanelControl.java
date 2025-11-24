@@ -81,6 +81,7 @@ public class PanelControl extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnDado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/dado1.1.png"))); // NOI18N
+        btnDado.setActionCommand("Dado");
         btnDado.setBorderPainted(false);
         btnDado.setContentAreaFilled(false);
         btnDado.addActionListener(new java.awt.event.ActionListener() {

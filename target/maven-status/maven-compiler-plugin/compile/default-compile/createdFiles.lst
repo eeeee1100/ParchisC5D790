@@ -1,5 +1,6 @@
 com\mycompany\parchisc5d790\vista\GUIInstrucciones$1.class
 com\mycompany\parchisc5d790\vista\GUIHistoria.class
+com\mycompany\parchisc5d790\controlador\AudioController.class
 com\mycompany\parchisc5d790\vista\GUIGameOver$1.class
 com\mycompany\parchisc5d790\vista\PanelJuego.class
 com\mycompany\parchisc5d790\modelo\AreaJuego.class
@@ -8,7 +9,6 @@ com\mycompany\parchisc5d790\modelo\Posicion.class
 com\mycompany\parchisc5d790\vista\GUIPrincipal.class
 com\mycompany\parchisc5d790\vista\GUIWin$1.class
 com\mycompany\parchisc5d790\vista\PanelControl.class
-ucr\com\parchisconjunto\controlador\AudioController.class
 com\mycompany\parchisc5d790\vista\GUICreditos.class
 com\mycompany\parchisc5d790\vista\GUIGameOver.class
 com\mycompany\parchisc5d790\modelo\BancoPregunta.class

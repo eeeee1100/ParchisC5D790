@@ -16,10 +16,11 @@ public class GUICronometro extends javax.swing.JFrame {
     /**
      * Creates new form NewJFrame
      */
-    public GUICronometro() {
+      public GUICronometro(ControladorPrincipal controlador) {
         initComponents();
-
-        
+        btnDetener.addActionListener(controlador);
+        btnIniciar.addActionListener(controlador);
+        btnPausar.addActionListener(controlador);
     }
 
     /**
@@ -79,11 +80,17 @@ public class GUICronometro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public String getJlTime() {
+        return jlTime.getText();
+    }
 
-    /**
-     * @param args the command line arguments
-     */
-    
+    public void setJlTime(String jlTime) {
+        this.jlTime.setText(jlTime);
+    }
+
+    public void setColor(){
+        
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDetener;

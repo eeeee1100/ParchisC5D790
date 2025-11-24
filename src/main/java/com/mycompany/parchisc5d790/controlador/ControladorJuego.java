@@ -5,7 +5,6 @@
 package com.mycompany.parchisc5d790.controlador;
 
 import com.mycompany.parchisc5d790.modelo.AreaJuego;
-import com.mycompany.parchisc5d790.modelo.Cronometro;
 import com.mycompany.parchisc5d790.modelo.Dado;
 import com.mycompany.parchisc5d790.modelo.Ficha;
 import com.mycompany.parchisc5d790.modelo.Posicion;
@@ -24,16 +23,12 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import javax.swing.Timer;
 
 /**
  *
  * @author Sham
  */
 public class ControladorJuego implements ActionListener, MouseListener {
-
-    
-    
     
     private GUIJuego guiJuego;
     private PanelJuego panelJuego;
@@ -44,9 +39,6 @@ public class ControladorJuego implements ActionListener, MouseListener {
     private Dado dado;
     private GUIGameOver guiGameOver;
     private GUIWin guiWin;
-    private Cronometro cronometro;
-    
-    
     private int resultadoDado = 0;
     private boolean turnoTerminado = true;
 
@@ -108,20 +100,11 @@ public class ControladorJuego implements ActionListener, MouseListener {
         panelJuego.repaint();
     
     }
-//    
-//       public void Controlador() {
-//
-//        timer = new Timer(30, this);
-//        panelControl = new PanelControl(this);
-//        cronometro = new Cronometro();
-//        update();
-//        frame.setVisible(true);
-//    }
     
+
     
     @Override
     public void actionPerformed(ActionEvent e) {
-
         switch (e.getActionCommand()) {
 
             case "Dado":
@@ -178,10 +161,8 @@ public class ControladorJuego implements ActionListener, MouseListener {
             case "ReiniciarWin":
                 
                 break;
-
         }
-
-    }
+    }//Fin del método switch
 
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -227,46 +208,6 @@ public class ControladorJuego implements ActionListener, MouseListener {
         
 
     }
-
-//    @Override
-//    public void actionPerformed(ActionEvent e) {
-//        if (e.getActionCommand() != null) {
-//            switch (e.getActionCommand()) {
-//                case "Iniciar":
-//                     
-//                    cronometro.start();
-//                    timer.start();
-//                   
-//                    break;
-//                case "Detener":
-//
-//                   cronometro.stop();
-//                   timer.stop();
-//                    break;
-//                case "Pausar":
-//                    cronometro.reset();
-//                    timer.restart();
-//                    break;
-//
-//            }
-//
-//        }
-//        if (timer.isRunning()) {
-//            update();
-//          
-//             if (cronometro.getElapsedTime()>= 20000) {
-//                        timer.stop();
-//                        cronometro.stop();
-//                    }
-//        }
-//    }
-//
-//    public void update() {
-//
-//        frame.setJlTime(cronometro.getFormattedTime());
-//    }
-//    
-//    
 
     @Override
     public void mousePressed(MouseEvent e) {

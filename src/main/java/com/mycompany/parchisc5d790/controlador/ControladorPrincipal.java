@@ -4,7 +4,9 @@
  */
 package com.mycompany.parchisc5d790.controlador;
 
+import com.mycompany.parchisc5d790.modelo.Cronometro;
 import com.mycompany.parchisc5d790.vista.GUICreditos;
+import com.mycompany.parchisc5d790.vista.GUICronometro;
 import com.mycompany.parchisc5d790.vista.GUIHistoria;
 import com.mycompany.parchisc5d790.vista.GUIInstrucciones;
 import com.mycompany.parchisc5d790.vista.GUIJuego;
@@ -12,6 +14,7 @@ import com.mycompany.parchisc5d790.vista.GUIJugador;
 import com.mycompany.parchisc5d790.vista.GUIPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.Timer;
 
 /**
  *
@@ -25,7 +28,10 @@ public class ControladorPrincipal implements ActionListener{
     private ControladorJuego controladorJuego;
     private GUIJugador guiJugador;
     private GUIJuego guiJuego;
-//    private AudioController audio;
+    private AudioController audio;
+    private Timer timer;
+    private Cronometro cronometro;
+    private GUICronometro guiCronometro;
     
     public ControladorPrincipal(){
         guiPrincipal = new GUIPrincipal(this); 
@@ -34,7 +40,12 @@ public class ControladorPrincipal implements ActionListener{
         guiInstrucciones = new GUIInstrucciones(this);
         guiHistoria = new GUIHistoria(this);
         guiJugador = new GUIJugador(this);
-//        audio = new AudioController();
+        audio = new AudioController();
+        timer = new Timer(30, this);
+        guiCronometro = new GUICronometro(this);
+        cronometro = new Cronometro();
+        update();
+        guiCronometro.setVisible(true);
     }
     
         @Override
@@ -78,14 +89,42 @@ public class ControladorPrincipal implements ActionListener{
                 case "Salir":
                     System.exit(0);
                     break;
-                case "Sonido":
-//                    if(audio.estaReproduciendo()){
-//                        audio.detener();
-//                    }else{
-//                        audio.iniciarMusica("/audios/LABUBU - OFFICIAL MV FULL SONG 2025.wav")
-//                    }
+                case "Volumen":
+                    if(audio.estaReproduciendo()){
+                        audio.detener();
+                    }else{
+                        audio.iniciarMusica("/audios/LABUBU - OFFICIAL MV FULL SONG 2025.wav");
+                    }
+                    break;
+                    
+                   case "Iniciar":
+                    cronometro.start();
+                    timer.start();
+                    break;
+                    
+                case "Detener":
+                   cronometro.stop();
+                   timer.stop();
+                    break;
+                    
+                case "Pausar":
+                    cronometro.reset();
+                    timer.restart();
                     break;
             }
+                    
+        if (timer.isRunning()) {
+            update();
+          
+             if (cronometro.getElapsedTime()>= 20000) {
+                        timer.stop();
+                        cronometro.stop();
+                    }
+        }
+    }
+
+    public void update() {
+        guiCronometro.setJlTime(cronometro.getFormattedTime());
     }
     
 }
