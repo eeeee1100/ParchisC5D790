@@ -5,6 +5,7 @@
 package com.mycompany.parchisc5d790.modelo;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  *
@@ -12,9 +13,21 @@ import java.util.ArrayList;
  */
 public class BancoPregunta {
     private ArrayList<Pregunta> listaPreguntas;
+    private Random random;
 
     public BancoPregunta() {
         listaPreguntas = new ArrayList<Pregunta>();
+        random = new Random();
+        crearPreguntas();
+    }
+    
+        public Pregunta getPreguntaAleatoria(){
+        
+        if (listaPreguntas.isEmpty()){
+            return null;
+        }
+        int index = random.nextInt(listaPreguntas.size());
+        return listaPreguntas.get(index);     
     }
     
     public void crearPreguntas(){

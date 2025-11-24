@@ -11,12 +11,12 @@ import javax.swing.JLabel;
  *
  * @author ITM
  */
-public class NewJFrame extends javax.swing.JFrame {
+public class GUICronometro extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
      */
-    public NewJFrame(ControladorPrincipal controller) {
+    public GUICronometro(ControladorPrincipal controller) {
         initComponents();
         btnDetener.addActionListener(controller);
          btnIniciar.addActionListener(controller);

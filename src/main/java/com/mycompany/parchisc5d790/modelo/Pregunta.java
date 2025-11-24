@@ -9,8 +9,8 @@ package com.mycompany.parchisc5d790.modelo;
  * @author Sham
  */
 public class Pregunta {
-    public String enunciado;
-    public int respuesta;
+    private String enunciado;
+    private int respuesta;
 
     public Pregunta() {
     }
@@ -19,22 +19,20 @@ public class Pregunta {
         this.enunciado = enunciado;
         this.respuesta = respuesta;
     }
-    
+
     public String getEnunciado() {
         return enunciado;
-    }
-
-    public int getRespuesta() {
-        return respuesta;
     }
 
     public void setEnunciado(String enunciado) {
         this.enunciado = enunciado;
     }
 
+    public int isRespuesta() {
+        return respuesta;
+    }
+
     public void setRespuesta(int respuesta) {
         this.respuesta = respuesta;
     }
-    
 }
-

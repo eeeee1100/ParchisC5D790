@@ -34,14 +34,18 @@ public class GUIInstrucciones extends javax.swing.JFrame {
 
         jlTexto = new javax.swing.JLabel();
         btnAtrasIns = new javax.swing.JButton();
+        jlTexto1 = new javax.swing.JLabel();
+        jlTexto2 = new javax.swing.JLabel();
+        jlTexto3 = new javax.swing.JLabel();
+        jlTexto4 = new javax.swing.JLabel();
         jlFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlTexto.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jlTexto.setText("El juego se tiene que jugar de esta manera:");
-        getContentPane().add(jlTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, -1, -1));
+        jlTexto.setText("Para sacar una ficha, se necesita un cinco.");
+        getContentPane().add(jlTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, -1, -1));
 
         btnAtrasIns.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botonAtras.png"))); // NOI18N
         btnAtrasIns.setActionCommand("AtrasInstrucciones");
@@ -53,6 +57,22 @@ public class GUIInstrucciones extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnAtrasIns, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 630, -1, -1));
+
+        jlTexto1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jlTexto1.setText("El juego se tiene que jugar de esta manera:");
+        getContentPane().add(jlTexto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, -1, -1));
+
+        jlTexto2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jlTexto2.setText("Se juega con cuatro fichas de un color y un dado");
+        getContentPane().add(jlTexto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
+
+        jlTexto3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jlTexto3.setText("Ganas al llevar todas tus fichas a la meta");
+        getContentPane().add(jlTexto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, -1, -1));
+
+        jlTexto4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jlTexto4.setText("Para mover fichas, se usa el número del dado. ");
+        getContentPane().add(jlTexto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, -1, -1));
 
         jlFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tableroInstrucciones.png"))); // NOI18N
         getContentPane().add(jlFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -72,5 +92,9 @@ public class GUIInstrucciones extends javax.swing.JFrame {
     private javax.swing.JButton btnAtrasIns;
     private javax.swing.JLabel jlFondo;
     private javax.swing.JLabel jlTexto;
+    private javax.swing.JLabel jlTexto1;
+    private javax.swing.JLabel jlTexto2;
+    private javax.swing.JLabel jlTexto3;
+    private javax.swing.JLabel jlTexto4;
     // End of variables declaration//GEN-END:variables
 }

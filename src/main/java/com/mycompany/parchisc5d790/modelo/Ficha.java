@@ -18,20 +18,22 @@ public class Ficha {
     private ImageIcon imagen;
     private String color;
     private Rectangle hitbox;
-    private boolean isTablero;
-    
+    private boolean inTablero;
+
     public Ficha(Posicion posicion, ImageIcon imagen, String color) {
         this.posicion = posicion;
         this.imagen = imagen;
         this.color = color;
+        hitbox = new Rectangle(posicion.getX()+30,posicion.getY()+30);
+        inTablero=false;
     }
-
-        public boolean isContains(int x, int y){
+    
+    public boolean isContains(int x, int y){
     
         return hitbox.contains(x, y);
     
     }
-    
+
     public Posicion getPosicion() {
         return posicion;
     }
@@ -40,8 +42,16 @@ public class Ficha {
         this.posicion = posicion;
     }
 
+    public ImageIcon getImagen() {
+        return imagen;
+    }
+
     public void setImagen(ImageIcon imagen) {
         this.imagen = imagen;
+    }
+
+    public String getColor() {
+        return color;
     }
 
     public void setColor(String color) {
@@ -49,6 +59,8 @@ public class Ficha {
     }
     
     public void dibujar(Component c, Graphics g){
-        imagen.paintIcon(c,g,posicion.getX(), posicion.getY());
+    
+        imagen.paintIcon(c,g,posicion.getX(),posicion.getY());
+    
     }
 }//Fin de la clase

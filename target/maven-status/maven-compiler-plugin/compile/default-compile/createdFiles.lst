@@ -17,7 +17,6 @@ com\mycompany\parchisc5d790\vista\GUIWin.class
 com\mycompany\parchisc5d790\modelo\Dado.class
 com\mycompany\parchisc5d790\modelo\Pregunta.class
 com\mycompany\parchisc5d790\vista\NewJFrame.class
-com\mycompany\parchisc5d790\modelo\Puntaje.class
 com\mycompany\parchisc5d790\vista\GUIInstrucciones.class
 com\mycompany\parchisc5d790\modelo\Jugador.class
 com\mycompany\parchisc5d790\modelo\CeldaEspecial.class

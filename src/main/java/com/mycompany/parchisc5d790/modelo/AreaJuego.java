@@ -16,11 +16,14 @@ public class AreaJuego {
     private Tablero tablero;
     private Jugador jugador1;
     private Jugador jugador2;
+    private BancoPregunta bancoPregunta;
+    
 
     public AreaJuego(String colorJugador1, String nombreJugador1,  String nombreJugador2) {
         tablero = new Tablero();
         crearJugadores(colorJugador1,nombreJugador1,nombreJugador2);
         tablero.crearCasas(colorJugador1);
+        bancoPregunta = new BancoPregunta();
     }
     
     public int getIndexFicha(int x, int y){
@@ -41,7 +44,33 @@ public class AreaJuego {
         tablero.getCasaJugador1().setFicha(indexFichaCasa, null);
     }
     
+    public int getIndexFichaEnTablero(int x, int y){
+        return tablero.getIndexFichaEnTablero(x,y);
+    }
     
+    public int moverFicha(int indiceActual, int pasos){
+        return tablero.moverFicha(indiceActual, pasos);
+    }
+    
+    public boolean isCeldaNormal(int indice){
+        return tablero.isCeldaNormal(indice);
+    }
+    
+    public Pregunta getPreguntaAleatroia(){
+        return bancoPregunta.getPreguntaAleatoria();
+    }
+    
+    public void aplicarResultadoPregunta(boolean acierto){
+    
+        if(acierto){
+            jugador1.sumarPuntos();
+            System.out.println("Jugador 1 suma 1 punto. Total: " + jugador1.getPuntos());
+        } else  {
+            jugador1.restarPunto();
+            System.out.println("Jugador 1 resta 1 punto. Total: " + jugador1.getPuntos());
+        }
+    
+    }
     
     public void crearJugadores(String colorJugador1, String nombreJugador1,  String nombreJugador2){
     
